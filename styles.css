@@ -1,0 +1,430 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-image {
+    height: 2.5rem;
+    width: auto;
+    max-width: 3rem;
+}
+
+.logo i {
+    font-size: 2rem;
+    color: #ffd700;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    background: rgba(255,255,255,0.2);
+    border: 2px solid transparent;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.nav-btn:hover {
+    background: rgba(255,255,255,0.3);
+    transform: translateY(-2px);
+}
+
+.nav-btn.active {
+    background: white;
+    color: #667eea;
+    border-color: white;
+}
+
+/* Search Section */
+.search-section {
+    padding: 2rem 0;
+    background: white;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-box i {
+    position: absolute;
+    left: 1rem;
+    color: #6c757d;
+    z-index: 2;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 1rem 3rem 1rem 3rem;
+    border: 2px solid #e9ecef;
+    border-radius: 50px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.clear-btn {
+    position: absolute;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: #6c757d;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.clear-btn:hover {
+    background: #f8f9fa;
+    color: #dc3545;
+}
+
+.filter-options {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-options select {
+    padding: 0.5rem 1rem;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.filter-options select:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+/* Results Section */
+.results-section {
+    padding: 2rem 0;
+}
+
+.results-header {
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    color: #6c757d;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Product Card */
+.product-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.product-category {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.category-makeup {
+    background: #ffeaa7;
+    color: #d63031;
+}
+
+.category-skincare {
+    background: #74b9ff;
+    color: #0984e3;
+}
+
+.product-brand {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 0.25rem;
+}
+
+.product-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.product-description {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.prices-section {
+    margin-top: 1rem;
+}
+
+.prices-header {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+}
+
+.price-item-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.price-item-link:hover {
+    transform: translateY(-2px);
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+    cursor: pointer;
+}
+
+.price-item-link:hover .price-item {
+    background: #e9ecef;
+    border-left-color: #667eea;
+}
+
+.price-site {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.site-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.site-icon i {
+    font-size: 1rem;
+}
+
+.site-name {
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.price-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.3rem;
+}
+
+.original-price {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    text-decoration: line-through;
+    margin-bottom: 0.2rem;
+}
+
+.discounted-price {
+    font-weight: 700;
+    color: #27ae60;
+    font-size: 1.1rem;
+}
+
+.visit-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    background: #667eea;
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.visit-badge i {
+    font-size: 0.65rem;
+}
+
+.price-item-link:hover .visit-badge {
+    opacity: 1;
+}
+
+.price-item.best-price .original-price {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.price-item.best-price .discounted-price {
+    color: white;
+}
+
+.best-price-badge {
+    background: #e74c3c;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-left: 0.5rem;
+}
+
+/* Footer */
+.footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+/* No Results */
+.no-results {
+    text-align: center;
+    padding: 3rem;
+    color: #6c757d;
+}
+
+.no-results i {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: #dee2e6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-options {
+        flex-direction: column;
+    }
+    
+    .filter-options select {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .logo h1 {
+        font-size: 1.4rem;
+    }
+    
+    .nav-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+}

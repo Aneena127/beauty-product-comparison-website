@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deal diva - Best Price Comparison Online Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="logo.png" alt="Logo" class="logo-image">
+                    <h1>DEAL DIVA</h1>
+                </div>
+                <nav class="nav">
+                    <button class="nav-btn active" data-category="all">All Products</button>
+                    <button class="nav-btn" data-category="makeup">Makeup</button>
+                    <button class="nav-btn" data-category="skincare">Skincare</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="search-section">
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="Search for products...">
+                        <button id="clearSearch" class="clear-btn" style="display: none;">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="filter-options">
+                        <select id="sortBy">
+                            <option value="name">Sort by Name</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="sites">Number of Sites</option>
+                        </select>
+                        <select id="priceRange">
+                            <option value="all">All Prices</option>
+                            <option value="0-2000">Under ₹2000</option>
+                            <option value="2000-4000">₹2000 - ₹4000</option>
+                            <option value="4000-8000">₹4000 - ₹8000</option>
+                            <option value="8000+">Over ₹8000</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+            <section class="results-section">
+                <div class="results-header">
+                    <span id="resultsCount">Loading products...</span>
+                </div>
+                <div id="productsGrid" class="products-grid">
+                    <!-- Products will be dynamically loaded here -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 deal diva. Compare prices across multiple online stores.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
